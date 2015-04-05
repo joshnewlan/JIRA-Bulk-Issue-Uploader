@@ -100,12 +100,6 @@ def create_issues(issuelist):
         if story:
             print story[0]
 
-            if issue.assignee:
-                story[0].update(assignee={'name': issue.assignee})
-            if issue.estimated_time:
-                story[0].update(timetracking={'originalEstimate': issue.estimated_time})
-
-
 def main():
     all_issues = create_issuelist(table)
     create_issues(all_issues)
